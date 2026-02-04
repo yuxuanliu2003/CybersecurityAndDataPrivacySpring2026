@@ -77,7 +77,7 @@
 - OWASP ZAP was used to perform an automated security scan against the registration endpoint to identify common web vulnerabilities.
 
 📎 **Attached report:**  
-- zap_report_round1.md
+- zap_report_round1.md　https://github.com/yuxuanliu2003/CybersecurityAndDataPrivacySpring2026/blob/0d0adc5d95cdb718f9b494ccd0d92dbfd85a70a3/BookingSystem/Phase1/Part1/zap_report_round1.md
 
 
 ---
