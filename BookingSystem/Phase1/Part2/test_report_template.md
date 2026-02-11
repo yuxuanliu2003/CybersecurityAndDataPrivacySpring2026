@@ -103,7 +103,7 @@ Most security vulnerabilities discovered in Part 1 have been fixed. Input valida
    ```
 2. Export results to markdown:  
    ```bash
-   zap-cli report -o zap_report_round1.md -f markdown
+   zap-cli report -o zap_report_round2.md -f markdown
    ```
 3. Save the report as `zap_report_round2.md` and link it below.
 
