@@ -54,7 +54,7 @@
 
 ---
 
-# 4️⃣ Findings (filled with examples → replace)
+# 4️⃣ Part 1 Findings (filled with examples → replace)
 
 > Fill in one row per finding. Focus on clarity and the most important issues.
 
@@ -65,7 +65,19 @@
 | F-03 | 🟡 Low | Improper handling of long password input | Submitting a password exceeding 2000 characters causes an error without a clear explanation. The application does not inform users of password length limits, and server-side handling of oversized input cannot be verified. | Manual testing with long password input (>2000 characters) |
 ---
 
+# Part 1 –> Part 2 Retesting Results
 
+| Test Case | Description | Result |
+|-------------|---------------|----------|
+| T1 | Normal registration | Success (Password must be at least 8 characters long) |
+| T2 | Special characters / XSS | Rejected |
+| T3 | Overlong password (5000+ chars) | Success (No length limit) |
+| T4 | Empty input submission | Rejected |
+| T5 | SQL injection payload | Rejected |
+---
+
+**Conclusion:**  
+Most security vulnerabilities discovered in Part 1 have been fixed. Input validation, filtering, and error handling have been significantly improved.
 
 > [!NOTE]
 > Include up to 5 findings total.   
