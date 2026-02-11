@@ -93,7 +93,7 @@
    ```bash
    zap-cli report -o zap_report_round1.md -f markdown
    ```
-3. Save the report as `zap_report_round1.md` and link it below.
+3. Save the report as `zap_report_round2.md` and link it below.
 
 ---
 > [!NOTE]
