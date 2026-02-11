@@ -70,10 +70,10 @@
 | Test Case | Description | Result |
 |-------------|---------------|----------|
 | T1 | Normal registration | Success (Password must be at least 8 characters long) |
-| T2 | Special characters / XSS | Rejected |
+| T2 | Special characters / XSS /SQL injection payload | Rejected |
 | T3 | Overlong password (5000+ chars) | Success (No length limit) |
 | T4 | Empty input submission | Rejected |
-| T5 | SQL injection payload | Rejected |
+| T5 | Incorrect email format | Failed (Validation Error: Invalid email address) |
 ---
 
 **Conclusion:**  
