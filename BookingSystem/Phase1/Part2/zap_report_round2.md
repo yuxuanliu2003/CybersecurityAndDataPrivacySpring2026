@@ -19,7 +19,7 @@ ZAP by [Checkmarx](https://checkmarx.com/).
 
 | Level | Reason | Site | Description | Statistic |
 | --- | --- | --- | --- | --- |
-| lowness | warning |  | ZAP warnings logged - see the zap.log file for details | 1    |
+| lowness | warning |  | ZAP warnings logged - see the zap.log file for details | 2    |
 | Info | Informational | http://localhost:8001 | Percentage of responses with status code 2xx | 18 % |
 | Info | Informational | http://localhost:8001 | Percentage of responses with status code 4xx | 80 % |
 | Info | Informational | http://localhost:8001 | Percentage of responses with status code 5xx | 8 % |
@@ -31,6 +31,17 @@ ZAP by [Checkmarx](https://checkmarx.com/).
 | Info | Informational | http://localhost:8001 | Percentage of endpoints with method POST | 9 % |
 | Info | Informational | http://localhost:8001 | Count of total endpoints | 11    |
 | Info | Informational | http://localhost:8001 | Percentage of slow responses | 8 % |
+| Info | Informational | http://localhost:8002 | Percentage of responses with status code 2xx | 20 % |
+| Info | Informational | http://localhost:8002 | Percentage of responses with status code 3xx | 7 % |
+| Info | Informational | http://localhost:8002 | Percentage of responses with status code 4xx | 78 % |
+| Info | Informational | http://localhost:8002 | Percentage of endpoints with content type application/javascript | 23 % |
+| Info | Informational | http://localhost:8002 | Percentage of endpoints with content type text/css | 7 % |
+| Info | Informational | http://localhost:8002 | Percentage of endpoints with content type text/html | 23 % |
+| Info | Informational | http://localhost:8002 | Percentage of endpoints with content type text/plain | 38 % |
+| Info | Informational | http://localhost:8002 | Percentage of endpoints with method GET | 92 % |
+| Info | Informational | http://localhost:8002 | Percentage of endpoints with method POST | 7 % |
+| Info | Informational | http://localhost:8002 | Count of total endpoints | 13    |
+| Info | Informational | http://localhost:8002 | Percentage of slow responses | 7 % |
 
 
 
@@ -39,7 +50,7 @@ ZAP by [Checkmarx](https://checkmarx.com/).
 
 | name | Risk level | Number of Instances |
 | --- | --- | --- |
-| Absence of Anti-CSRF Tokens | middle | 1 |
+| Absence of Anti-CSRF Tokens | middle | 2 |
 | Content Security Policy (CSP) Header Not Set | middle | 2 |
 | Missing Anti-clickjacking Header | middle | 2 |
 | Application Error Disclosure | lowness | 1 |
@@ -56,7 +67,7 @@ ZAP by [Checkmarx](https://checkmarx.com/).
 
 
 
-##### Medium (low)
+##### middle (lowness)
 
 ### explanation
 
@@ -77,9 +88,16 @@ CSRF has primarily been used to perform an action against a target site using th
   * attack: ``
   * Evidence: `<form action="/register" method="POST">`
   * Other information: `No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token, _csrfToken] was found in the following HTML form: [Form 1: "birthdate" "password" "username" ].`
+* URL: http://localhost:8002/register
+  * Node Name: `http://localhost:8002/register`
+  * Method: `GET`
+  * Parameter: ``
+  * attack: ``
+  * Evidence: `<form action="/register" method="POST">`
+  * Other information: `No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token, _csrfToken] was found in the following HTML form: [Form 1: "birthdate" "password" "username" ].`
 
 
-Instances: 1
+Instances: 2
 
 ### Solution
 
@@ -123,7 +141,7 @@ Check the HTTP Referer header to see if the request originated from an expected 
 
 
 
-##### Medium (High)
+##### middle (height)
 
 ### explanation
 
@@ -220,7 +238,7 @@ If you expect the page to be framed only by pages on your server (e.g. it's part
 
 
 
-##### Low (medium)
+##### lowness (middle)
 
 ### explanation
 
@@ -256,7 +274,7 @@ Review the source code of this page. Implement custom error pages. Consider impl
 
 
 
-##### Low (medium)
+##### lowness (middle)
 
 ### explanation
 
@@ -298,7 +316,7 @@ At "High" threshold this scan rule will not alert on client or server error resp
   * Node Name: `http://localhost:8001/static/tailwind.css`
   * Method: `GET`
   * Parameter: `x-content-type-options`
-  * 공격: ``
+  * attack: ``
   * Evidence: ``
   * Other information: `This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
 At "High" threshold this scan rule will not alert on client or server error responses.`
