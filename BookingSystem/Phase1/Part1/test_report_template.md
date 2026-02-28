@@ -63,8 +63,8 @@
 | 1 | 🟠 Medium | Provide clear success and error messages after user registration attempts | Registration succeeded. After registration, refreshing the page yields no response. | Screenshot 1 |
 | 2 | 🔴 High | Improve server-side validation error handling and feedback | Empty input is not allowed, but illegal email addresses can be registered. | Screenshot 2-3 |
 | 3 | 🔴 High | Log and differentiate failed and successful registration attempts | Registration error due to inputting more than 2000 characters | Screenshot 4 |
-| 4 | 🔴 High | Review input validation consistency between frontend and backend | After the front-end inputs `<script>alert(1)</script>`, it redirects to the error interface with status 200. The back-end registers an invalid email address and returns a status code of 200. | Screenshot 5-6 |
-| 5 | 🔴 High | Perform a full security review of authentication-related endpoints | SQL Injection: ' OR '1'='1 | Screenshot 7 |
+| 4 | 🔴 High | Review input validation consistency between frontend and backend | I changed the HTML type="email" for the Email input box to type="text". | Screenshot 5 |
+| 5 | 🔴 High | Perform a full security review of authentication-related endpoints | SQL Injection in password: ' OR '1'='1 | Screenshot 6 |
 ---
 
 # Screenshots
@@ -79,16 +79,14 @@
 > <img width="771" height="262" alt="image" src="https://github.com/user-attachments/assets/34277c00-9de4-4a35-b2d2-69acc7443741" />
 
 > ## Screenshot 4
-> <img width="481" height="259" alt="image" src="https://github.com/user-attachments/assets/72366e69-f20b-4e1c-bbe3-ca3a5d56d49b" />
+> <img width="897" height="283" alt="image" src="https://github.com/user-attachments/assets/8edbda93-6e23-4713-ac26-38879d957156" />
+
 
 
 > ## Screenshot 5
 > <img width="2268" height="715" alt="image" src="https://github.com/user-attachments/assets/6a1911ce-36bf-4aea-9414-c8c76c304bc2" />
 
 > ## Screenshot 6
-> <img width="831" height="462" alt="image" src="https://github.com/user-attachments/assets/8c884e09-a285-4dc3-bf27-33e2ae8358dd" />
-
-> ## Screenshot 7
 > <img width="2322" height="713" alt="image" src="https://github.com/user-attachments/assets/7038524b-0a02-4ca4-ad27-9abe52183285" />
 
 
