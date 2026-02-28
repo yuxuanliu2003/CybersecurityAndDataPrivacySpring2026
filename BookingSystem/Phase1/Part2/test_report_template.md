@@ -67,9 +67,9 @@
 
 # Part 1 –> Part 2 Retesting Results
 
-| Test Case | Description | Result |
+| ID | Description | Part 1 | Part 2 | Status |
 |-------------|---------------|----------|
-| T1 | Normal registration | Success (Password must be at least 8 characters long) |
+| F-01 | The registration process did not provide clear feedback to the user after submitting the registration form. | I submitted both valid and invalid registration data and returned to the registration page without displaying any informative feedback. | I repeated the same registration tests using valid and invalid input data. I carefully observed whether the system displayed proper success or error messages. | Fixed |
 | T2 | Special characters / XSS /SQL injection payload | Rejected |
 | T3 | Overlong password (5000+ chars) | Success (No length limit) |
 | T4 | Empty input submission | Rejected |
