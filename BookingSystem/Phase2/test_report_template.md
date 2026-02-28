@@ -12,8 +12,8 @@
 - Test approach: Black-box
 
 **Test environment & dates:**  
-- Start:  11.02.2026
-- End:  11.02.2026
+- Start:  17.02.2026
+- End:  18.02.2026
 - Test environment details (OS, runtime, DB, browsers):
   - OS: Windows 11  
   - Runtime: Docker Desktop  
@@ -69,30 +69,36 @@
 
 # Screenshots
 > ## Screenshot 1
-> <img width="803" height="386" alt="image" src="https://github.com/user-attachments/assets/e8289d31-8fe9-40f0-9f13-2816c3a8f137" />
+> <img width="774" height="355" alt="image" src="https://github.com/user-attachments/assets/1d959df4-6b73-4e09-9d63-fbc852a38d28" />
+
 
 > ## Screenshot 2
-> <img width="771" height="390" alt="image" src="https://github.com/user-attachments/assets/f292ad21-8df1-424d-a2c7-df5229c57173" />
+> <img width="740" height="382" alt="image" src="https://github.com/user-attachments/assets/774e2fdf-57d2-4b50-ab13-334d4c8e7742" />
+
+
 
 
 > ## Screenshot 3
-> <img width="789" height="387" alt="image" src="https://github.com/user-attachments/assets/e3e8b6b6-b094-407c-b696-37861e9cdc98" />
+> <img width="766" height="385" alt="image" src="https://github.com/user-attachments/assets/0ddc3843-4555-4649-a801-9e1c9aff2668" />
 
 
 
 > ## Screenshot 4
-> <img width="762" height="349" alt="image" src="https://github.com/user-attachments/assets/bd83ec95-897d-4d55-8147-6394748f4c5f" />
+> <img width="760" height="346" alt="image" src="https://github.com/user-attachments/assets/e0813630-6f18-4131-a424-8caa43f6371f" />
+
 
 
 > ## Screenshot 5
-> <img width="904" height="369" alt="image" src="https://github.com/user-attachments/assets/c67d0137-f90b-40d5-8417-45a6aa4b6f14" />
+> <img width="766" height="354" alt="image" src="https://github.com/user-attachments/assets/51acb058-b4ba-41e2-b644-5b236d6e3073" />
+
 
 
 
 
 
 > ## Screenshot 6
-> <img width="769" height="362" alt="image" src="https://github.com/user-attachments/assets/23ddd7a7-a20b-40e0-9491-434fcdd4a1f2" />
+> <img width="764" height="364" alt="image" src="https://github.com/user-attachments/assets/db028628-49c4-478a-b73e-9c49f60f236d" />
+
 
 
 
@@ -114,7 +120,7 @@ Most security vulnerabilities discovered in Part 1 have been fixed. Input valida
 - OWASP ZAP was used to perform an automated security scan against the registration endpoint to identify common web vulnerabilities.
 
 📎 **Attached report:**  
-- zap_report_round2.md (https://github.com/yuxuanliu2003/CybersecurityAndDataPrivacySpring2026/blob/0ae9052b8002abda2bd782f06becde63ebc85470/BookingSystem/Phase1/Part2/zap_report_round2.md)
+- zap_report_round3.md (https://github.com/yuxuanliu2003/CybersecurityAndDataPrivacySpring2026/blob/0ae9052b8002abda2bd782f06becde63ebc85470/BookingSystem/Phase1/Part2/zap_report_round2.md)
 
 
 ---
@@ -128,7 +134,7 @@ Most security vulnerabilities discovered in Part 1 have been fixed. Input valida
    ```bash
    zap-cli report -o zap_report_round2.md -f markdown
    ```
-3. Save the report as `zap_report_round2.md` and link it below.
+3. Save the report as `zap_report_round3.md` and link it below.
 
 ---
 > [!NOTE]
