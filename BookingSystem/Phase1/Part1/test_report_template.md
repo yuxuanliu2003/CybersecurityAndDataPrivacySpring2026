@@ -60,7 +60,7 @@
 
 | ID | Severity | Finding | Description | Evidence / Proof |
 |------|-----------|----------|--------------|------------------|
-| 1 |  🟠 **Medium**    | Provide clear success and error messages after user registration attempts | Registration succeeds regardless of whether the email address is correct. After registration, refreshing the page yields no response. | Screenshot 1 |
+| 1 | 🟠 Medium | Provide clear success and error messages after user registration attempts | Registration succeeds regardless of whether the email address is correct. After registration, refreshing the page yields no response. | Screenshot 1 |
 | 2 | 🔴 High | Improve server-side validation error handling and feedback | Empty input is not allowed, but illegal email addresses can be registered. | Screenshot 2-3 |
 | 3 | 🔴 High | Log and differentiate failed and successful registration attempts | Registration error due to inputting more than 2000 characters | Screenshot 4 |
 | 4 | 🔴 High | Review input validation consistency between frontend and backend | After the front-end inputs `<script>alert(1)</script>`, it redirects to the error interface with status 200. The back-end registers an invalid email address and returns a status code of 200. | Screenshot 5-6 |
