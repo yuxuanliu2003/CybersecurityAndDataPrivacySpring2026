@@ -60,10 +60,37 @@
 
 | ID | Severity | Finding | Description | Evidence / Proof |
 |------|-----------|----------|--------------|------------------|
-| F-01 | 🟠 Medium | Missing registration feedback | After submitting the registration form, the application redirects back to the registration page without displaying any success or error message. | HTTP 302 response observed in browser developer tools |
-| F-02 | 🟡 Low | Unclear input validation rules | The application blocks certain characters (e.g. '<', SQL keywords) in the email field. | Browser validation messages and repeated 302 redirects |
-| F-03 | 🟡 Low | Improper handling of long password input | Submitting a password exceeding 2000 characters causes an error without a clear explanation. The application does not inform users of password length limits, and server-side handling of oversized input cannot be verified. | Manual testing with long password input (>2000 characters) |
+| 1 |  🟠 **Medium**    | Provide clear success and error messages after user registration attempts | Registration succeeds regardless of whether the email address is correct. After registration, refreshing the page yields no response. | Screenshot 1 |
+| 2 | 🔴 High | Improve server-side validation error handling and feedback | Empty input is not allowed, but illegal email addresses can be registered. | Screenshot 2-3 |
+| 3 | 🔴 High | Log and differentiate failed and successful registration attempts | Registration error due to inputting more than 2000 characters | Screenshot 4 |
+| 4 | 🔴 High | Review input validation consistency between frontend and backend | After the front-end inputs `<script>alert(1)</script>`, it redirects to the error interface with status 200. The back-end registers an invalid email address and returns a status code of 200. | Screenshot 5-6 |
+| 5 | 🔴 High | Perform a full security review of authentication-related endpoints | SQL Injection: ' OR '1'='1 | Screenshot 7 |
 ---
+
+# Screenshots
+> ## Screenshot 1
+> <img width="708" height="331" alt="image" src="https://github.com/user-attachments/assets/ecf2b992-cce4-4edd-886b-e59201f69a0f" />
+
+
+> ## Screenshot 2
+> <img width="800" height="343" alt="image" src="https://github.com/user-attachments/assets/d7e6b55b-f4a9-43ad-a919-c8fd42487489" />
+
+> ## Screenshot 3
+> <img width="771" height="262" alt="image" src="https://github.com/user-attachments/assets/34277c00-9de4-4a35-b2d2-69acc7443741" />
+
+> ## Screenshot 4
+> <img width="481" height="259" alt="image" src="https://github.com/user-attachments/assets/72366e69-f20b-4e1c-bbe3-ca3a5d56d49b" />
+
+
+> ## Screenshot 5
+> <img width="2268" height="715" alt="image" src="https://github.com/user-attachments/assets/6a1911ce-36bf-4aea-9414-c8c76c304bc2" />
+
+> ## Screenshot 6
+> <img width="831" height="462" alt="image" src="https://github.com/user-attachments/assets/8c884e09-a285-4dc3-bf27-33e2ae8358dd" />
+
+> ## Screenshot 7
+> <img width="2322" height="713" alt="image" src="https://github.com/user-attachments/assets/7038524b-0a02-4ca4-ad27-9abe52183285" />
+
 
 > [!NOTE]
 > Include up to 5 findings total.   
