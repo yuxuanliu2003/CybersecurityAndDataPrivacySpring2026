@@ -79,12 +79,12 @@
 > <img width="771" height="262" alt="image" src="https://github.com/user-attachments/assets/34277c00-9de4-4a35-b2d2-69acc7443741" />
 
 > ## Screenshot 4
-> <img width="897" height="283" alt="image" src="https://github.com/user-attachments/assets/8edbda93-6e23-4713-ac26-38879d957156" />
+> <img width="721" height="392" alt="image" src="https://github.com/user-attachments/assets/9041d60a-954b-4eea-84bc-b3e345c68d2f" />
 
 
 
 > ## Screenshot 5
-> <img width="2268" height="715" alt="image" src="https://github.com/user-attachments/assets/6a1911ce-36bf-4aea-9414-c8c76c304bc2" />
+> <img width="897" height="283" alt="image" src="https://github.com/user-attachments/assets/8edbda93-6e23-4713-ac26-38879d957156" />
 
 > ## Screenshot 6
 > <img width="2322" height="713" alt="image" src="https://github.com/user-attachments/assets/7038524b-0a02-4ca4-ad27-9abe52183285" />
