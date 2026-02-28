@@ -63,8 +63,8 @@
 | 1 | 🟠 Medium | Provide clear success and error messages after user registration attempts | Registration succeeded, but weak password failed | Fixed | Screenshot 1-2 |
 | 2 | 🔴 High | Improve server-side validation error handling and feedback | Invalid email register failed. | Fixed | Screenshot 3 |
 | 3 | 🔴 High | Log and differentiate failed and successful registration attempts | Registration was successful after entering more than 2000 characters. | Fixed | Screenshot 4 |
-| 4 | 🔴 High | Review input validation consistency between frontend and backend | After the front-end inputs `<script>alert(1)</script>`, it redirects to the error interface with status 200. The back-end registers an invalid email address and returns a status code of 200. | Fixed | Screenshot 5-6 |
-| 5 | 🔴 High | Perform a full security review of authentication-related endpoints | SQL Injection: test'--@a.com -> succeeded | Fixed | Screenshot 7 |
+| 4 | 🔴 High | Review input validation consistency between frontend and backend | Input test%2Ftest@test.com | Fixed | Screenshot 5 |
+| 5 | 🔴 High | Perform a full security review of authentication-related endpoints | SQL Injection: test'/*@test.com | Fixed | Screenshot 6 |
 ---
 
 # Screenshots
@@ -85,15 +85,17 @@
 
 
 > ## Screenshot 5
-> <img width="2088" height="720" alt="image" src="https://github.com/user-attachments/assets/d552e007-721d-424d-8863-b8e3d544b5d1" />
+> <img width="904" height="369" alt="image" src="https://github.com/user-attachments/assets/c67d0137-f90b-40d5-8417-45a6aa4b6f14" />
+
+
+
 
 
 > ## Screenshot 6
-> <img width="2088" height="720" alt="image" src="https://github.com/user-attachments/assets/d8a54e05-fbe8-49c2-bd1a-0b5a625b005f" />
+> <img width="769" height="362" alt="image" src="https://github.com/user-attachments/assets/23ddd7a7-a20b-40e0-9491-434fcdd4a1f2" />
 
 
-> ## Screenshot 7
-> <img width="2050" height="899" alt="image" src="https://github.com/user-attachments/assets/755e6a3e-4b56-4309-a57c-fd8ac98510b5" />
+
 
 ---
 
