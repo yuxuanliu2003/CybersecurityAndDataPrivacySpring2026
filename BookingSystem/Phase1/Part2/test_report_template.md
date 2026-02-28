@@ -54,26 +54,47 @@
 
 ---
 
-# 4️⃣ Part 1 Findings (filled with examples → replace)
+# 4️⃣ Findings (filled with examples → replace)
 
 > Fill in one row per finding. Focus on clarity and the most important issues.
 
-| ID | Severity | Finding | Description | Evidence / Proof |
-|------|-----------|----------|--------------|------------------|
-| F-01 | 🟠 Medium | Missing registration feedback | After submitting the registration form, the application redirects back to the registration page without displaying any success or error message. | HTTP 302 response observed in browser developer tools |
-| F-02 | 🟡 Low | Unclear input validation rules | The application blocks certain characters (e.g. '<', SQL keywords) in the email field. | Browser validation messages and repeated 302 redirects |
-| F-03 | 🟡 Low | Improper handling of long password input | Submitting a password exceeding 2000 characters causes an error without a clear explanation. The application does not inform users of password length limits, and server-side handling of oversized input cannot be verified. | Manual testing with long password input (>2000 characters) |
+| ID | Severity | Finding | Description | Status | Evidence / Proof |
+|------|-----------|----------|--------------|------------------|-----------------|
+| 1 | 🟠 Medium | Provide clear success and error messages after user registration attempts | Registration succeeded, but weak password failed | Fixed | Screenshot 1-2 |
+| 2 | 🔴 High | Improve server-side validation error handling and feedback | Invalid email register failed. | Fixed | Screenshot 3 |
+| 3 | 🔴 High | Log and differentiate failed and successful registration attempts | Registration was successful after entering more than 2000 characters. | Fixed | Screenshot 4 |
+| 4 | 🔴 High | Review input validation consistency between frontend and backend | After the front-end inputs `<script>alert(1)</script>`, it redirects to the error interface with status 200. The back-end registers an invalid email address and returns a status code of 200. | Fixed | Screenshot 5-6 |
+| 5 | 🔴 High | Perform a full security review of authentication-related endpoints | SQL Injection: test'--@a.com -> succeeded | Fixed | Screenshot 7 |
 ---
 
-# Part 1 –> Part 2 Retesting Results
+# Screenshots
+> ## Screenshot 1
+> <img width="803" height="386" alt="image" src="https://github.com/user-attachments/assets/e8289d31-8fe9-40f0-9f13-2816c3a8f137" />
 
-| ID | Description | Part 1 | Part 2 | Status |
-|-------------|---------------|----------|
-| F-01 | The registration process did not provide clear feedback to the user after submitting the registration form. | I submitted both valid and invalid registration data and returned to the registration page without displaying any informative feedback. | I repeated the same registration tests using valid and invalid input data. I carefully observed whether the system displayed proper success or error messages. | Fixed |
-| T2 | Special characters / XSS /SQL injection payload | Rejected |
-| T3 | Overlong password (5000+ chars) | Success (No length limit) |
-| T4 | Empty input submission | Rejected |
-| T5 | Incorrect email format | Failed (Validation Error: Invalid email address) |
+> ## Screenshot 2
+> <img width="771" height="390" alt="image" src="https://github.com/user-attachments/assets/f292ad21-8df1-424d-a2c7-df5229c57173" />
+
+
+> ## Screenshot 3
+> <img width="789" height="387" alt="image" src="https://github.com/user-attachments/assets/e3e8b6b6-b094-407c-b696-37861e9cdc98" />
+
+
+
+> ## Screenshot 4
+> <img width="762" height="349" alt="image" src="https://github.com/user-attachments/assets/bd83ec95-897d-4d55-8147-6394748f4c5f" />
+
+
+> ## Screenshot 5
+> <img width="2088" height="720" alt="image" src="https://github.com/user-attachments/assets/d552e007-721d-424d-8863-b8e3d544b5d1" />
+
+
+> ## Screenshot 6
+> <img width="2088" height="720" alt="image" src="https://github.com/user-attachments/assets/d8a54e05-fbe8-49c2-bd1a-0b5a625b005f" />
+
+
+> ## Screenshot 7
+> <img width="2050" height="899" alt="image" src="https://github.com/user-attachments/assets/755e6a3e-4b56-4309-a57c-fd8ac98510b5" />
+
 ---
 
 **Conclusion:**  
