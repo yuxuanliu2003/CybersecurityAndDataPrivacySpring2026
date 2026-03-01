@@ -20,11 +20,18 @@
 - **Can open register page: http://localhost:8004/register**
   > <img width="755" height="673" alt="image" src="https://github.com/user-attachments/assets/5985eda2-01d3-4c13-b254-0c33f5063bc9" />
 
+---
 
 ### ❌ Cannot do
 - **Cannot add a new resource (observation): The button is grayed out and cannot be clicked.**
 - **Cannot add a new reservation (observation): The button is grayed out and cannot be clicked.**
   > <img width="1586" height="577" alt="image" src="https://github.com/user-attachments/assets/fc032b95-3a37-4374-a978-9e1a720364b1" />
+- **When attempting to access protected endpoints (e.g., /reservation), the system returns "Unauthorized" or redirects to the homepage.**
+  > <img width="780" height="366" alt="image" src="https://github.com/user-attachments/assets/ebd22f29-6812-4cf3-b584-637c168c31d9" />
+
+### Conclusion for Guest:
+#### Authentication checks are correctly implemented. The system properly blocks unauthenticated users from protected functionality.
+  
 ---
 
 ## 2) Reserver (normal user)
@@ -45,9 +52,9 @@
   URL: http://localhost:8004/reservation  
    > <img width="865" height="667" alt="image" src="https://github.com/user-attachments/assets/8325591f-e4dd-49a0-b1d4-af665ccf01ec" />
 
-- **Can view own reservation**  
+- **Can modify ownership**  
   URL example: http://localhost:8004/reservation?id=7  
-  > <img width="857" height="664" alt="image" src="https://github.com/user-attachments/assets/775054d2-85e1-45ca-9e53-178601d12978" />
+  > <img width="860" height="663" alt="image" src="https://github.com/user-attachments/assets/e6addb46-b613-4f14-87fd-b1323268f724" />
 
 - **Can edit and delete own reservation**  
   > <img width="1530" height="583" alt="image" src="https://github.com/user-attachments/assets/54320f68-6575-4077-a9af-847b75331682" />
@@ -73,6 +80,9 @@
   - This may allow ownership confusion.
   - Server should validate that reservation owner matches the logged-in user.
 
+### Conclusion for Reserver:
+#### A reserver can manually modify the reservation owner field (e.g., enter admin email/ID), which may cause ownership confusion.  Basic ownership-based authorization exists, but error handling and ownership validation are not fully secure.
+
 ---
 
 ## 3) Administrator
@@ -96,3 +106,22 @@
 
 ### ⚠️ Potential authorization weakness
 - **Normal user can fill the reservation "Reserver username" field with the admin email/ID, which may confuse ownership and could lead to privilege/identity issues.**
+
+### Conclusion for Administrator:
+#### Administrative privileges exist at the functionality level (editing/deleting others’ reservations), but there is no clear separation of admin interface. Error handling for invalid reservation access is still weak.
+
+---
+
+## Summary
+
+### The system implements:
+
+- Role-based authorization (Guest / Reserver / Administrator)
+- Ownership-based access control for reservations
+- Authentication checks for protected endpoints
+
+### Weaknesses:
+
+- Unauthorized access attempts result in 500 Internal Server Error instead of proper 403/404 responses.
+- Reservation ownership can be manually manipulated.
+- No clearly separated admin interface.
