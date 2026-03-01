@@ -12,8 +12,8 @@
 - Test approach: Black-box
 
 **Test environment & dates:**  
-- Start:  11.02.2026
-- End:  01.03.2026
+- Start:  08.02.2026
+- End:  11.02.2026
 - Test environment details (OS, runtime, DB, browsers):
   - OS: Windows 11  
   - Runtime: Docker Desktop  
