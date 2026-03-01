@@ -117,6 +117,20 @@ Most security vulnerabilities discovered in Part 1 have been fixed. Input valida
 
 # Cracked Password Report
 
+## Environment
+
+Operating System: Linux (Docker container)
+
+Tool: Hashcat v6.2.6
+
+Wordlist: rockyou.txt
+
+Attack Mode: Dictionary attack
+
+Hash Type: MD5
+
+## Cracked Password
+
 1. User: whatsupdoc@looneytunes.tv 
    Hash: a0e8402fe185455606a2ae870dcbc4cd (MD5)
    Password: carrots123
