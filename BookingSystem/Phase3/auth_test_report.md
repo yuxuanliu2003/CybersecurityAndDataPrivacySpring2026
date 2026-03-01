@@ -1,7 +1,7 @@
 # Authorization Test Report
 
 > Roles tested: Guest / Reserver / Administrator  
-> Testing phase: Browser testing
+> Testing phase: Browser testing Phase 1
 
 ## 0) Pages/Functions discovered (from UI)
 <img width="1586" height="577" alt="image" src="https://github.com/user-attachments/assets/fc032b95-3a37-4374-a978-9e1a720364b1" />
