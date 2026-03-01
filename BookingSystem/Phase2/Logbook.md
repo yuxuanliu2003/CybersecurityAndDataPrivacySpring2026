@@ -1,4 +1,4 @@
-# 16.02-1.3.2026 – Phase 2
+# 16.02-18.2.2026 – Phase 2
 Debian Docker environment failed, so I switched to using Docker Desktop and VS Code.
 
 **Activity:**  
@@ -63,4 +63,4 @@ The attack was successful because the password was weak and existed in the rocky
 This experiment shows that weak passwords are extremely vulnerable to dictionary attacks, emphasizing the importance of strong password policies and secure hashing algorithms in cybersecurity.
 
 **Time Spent:**  
-- 7 + 4 hours
+- 7 hours
