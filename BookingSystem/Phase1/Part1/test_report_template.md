@@ -63,8 +63,8 @@
 | 1 | 🟠 Medium | Provide clear success and error messages after user registration attempts | Registration succeeded. After registration, refreshing the page yields no response. | Screenshot 1 |
 | 2 | 🔴 High | Improve server-side validation error handling and feedback | Empty input is not allowed, but illegal email addresses can be registered. | Screenshot 2-3 |
 | 3 | 🔴 High | Log and differentiate failed and successful registration attempts | Registration error due to inputting more than 2000 characters | Screenshot 4 |
-| 4 | 🔴 High | Review input validation consistency between frontend and backend | Input test%2Ftest@test.com | Screenshot 5 |
-| 5 | 🔴 High | Perform a full security review of authentication-related endpoints | SQL Injection: test'/*@test.com | Screenshot 6 |
+| 4 | 🔴 High | Review input validation consistency between frontend and backend | After input test%2Ftest@test.com, registration succeeded I changed the HTML input type="email" for the email input box to input type="text". | Screenshot 5-6 |
+| 5 | 🔴 High | Perform a full security review of authentication-related endpoints | SQL Injection: test'/*@test.com | Screenshot 7 |
 ---
 
 # Screenshots
@@ -87,8 +87,11 @@
 > <img width="614" height="222" alt="image" src="https://github.com/user-attachments/assets/fe4f4fb0-bb7f-44c7-8e8b-1f3757796728" />
 
 
-
 > ## Screenshot 6
+> <img width="815" height="276" alt="image" src="https://github.com/user-attachments/assets/87870e96-db16-4027-bcad-6163643d6793" />
+
+
+> ## Screenshot 7
 > <img width="472" height="167" alt="image" src="https://github.com/user-attachments/assets/40c48948-22c3-4d72-b615-ba3804aa483c" />
 
 
