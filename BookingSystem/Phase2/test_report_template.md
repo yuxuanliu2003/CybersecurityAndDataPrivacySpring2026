@@ -120,7 +120,7 @@ Most security vulnerabilities discovered in Part 1 have been fixed. Input valida
 - OWASP ZAP was used to perform an automated security scan against the registration endpoint to identify common web vulnerabilities.
 
 📎 **Attached report:**  
-- zap_report_round3.md (https://github.com/yuxuanliu2003/CybersecurityAndDataPrivacySpring2026/blob/0ae9052b8002abda2bd782f06becde63ebc85470/BookingSystem/Phase1/Part2/zap_report_round2.md)
+- zap_report_round3.md (https://github.com/yuxuanliu2003/CybersecurityAndDataPrivacySpring2026/blob/fba0e35243485cb000e229de96f7b157bde90944/BookingSystem/Phase2/zap_report_round3.md)
 
 
 ---
