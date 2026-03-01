@@ -63,4 +63,4 @@ The attack was successful because the password was weak and existed in the rocky
 This experiment shows that weak passwords are extremely vulnerable to dictionary attacks, emphasizing the importance of strong password policies and secure hashing algorithms in cybersecurity.
 
 **Time Spent:**  
-- 20 hours
+- 12 + 5 hours
