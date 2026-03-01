@@ -63,8 +63,8 @@
 | 1 | 🟠 Medium | Provide clear success and error messages after user registration attempts | Registration succeeded, but weak password failed | Fixed | Screenshot 1-2 |
 | 2 | 🔴 High | Improve server-side validation error handling and feedback | Invalid email register failed. | Fixed | Screenshot 2-3 |
 | 3 | 🔴 High | Log and differentiate failed and successful registration attempts | Invalid email register failed. Registration was successful after entering more than 2000 characters. | Fixed | Screenshot 3-4 |
-| 4 | 🔴 High | Review input validation consistency between frontend and backend | Encoded malicious input (e.g., test%2Ftest@test.com) bypassed frontend validation and was accepted by the backend. | Not Fixed | Screenshot 5 |
-| 5 | 🔴 High | Perform a full security review of authentication-related endpoints | SQL injection style input such as test'/*@test.com was accepted, indicating serious backend security weaknesses. | Not Fixed | Screenshot 6 |
+| 4 | 🔴 High | Review input validation consistency between frontend and backend | Encoded malicious input (e.g., test%2Ftest@test.com) bypassed frontend validation and was accepted by the backend. I changed the HTML input type="email" for the email input box to input type="text", registration faild. | Not Fixed | Screenshot 5-6 |
+| 5 | 🔴 High | Perform a full security review of authentication-related endpoints | SQL injection style input such as test'/*@test.com was accepted, indicating serious backend security weaknesses. | Not Fixed | Screenshot 7 |
 ---
 
 # Screenshots
@@ -91,12 +91,13 @@
 > ## Screenshot 5
 > <img width="766" height="354" alt="image" src="https://github.com/user-attachments/assets/51acb058-b4ba-41e2-b644-5b236d6e3073" />
 
-
-
-
-
-
 > ## Screenshot 6
+> <img width="1894" height="642" alt="image" src="https://github.com/user-attachments/assets/a90ae54c-2045-40ce-9184-d48323ea0b5d" />
+
+
+
+
+> ## Screenshot 7
 > <img width="764" height="364" alt="image" src="https://github.com/user-attachments/assets/db028628-49c4-478a-b73e-9c49f60f236d" />
 
 
