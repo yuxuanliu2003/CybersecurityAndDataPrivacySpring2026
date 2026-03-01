@@ -1,4 +1,4 @@
-# Authorization testing performed for Phase 3 (1.3-2026)
+# Authorization testing performed for Phase 3 (26.02-01.03.2026)
 ## Environment:
 
 - Docker-based booking system running on http://localhost:8004/.
@@ -88,4 +88,4 @@
 
 #### Time Spent:
 
-#### 5 hours
+#### 10 hours
