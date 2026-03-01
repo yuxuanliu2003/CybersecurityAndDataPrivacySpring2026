@@ -62,7 +62,7 @@
 |------|-----------|----------|--------------|------------------|-----------------|
 | 1 | 🟠 Medium | Provide clear success and error messages after user registration attempts | Registration succeeded, but weak password failed | Fixed | Screenshot 1-2 |
 | 2 | 🔴 High | Improve server-side validation error handling and feedback | Invalid email register failed. | Fixed | Screenshot 2-3 |
-| 3 | 🔴 High | Log and differentiate failed and successful registration attempts | Registration was successful after entering more than 2000 characters. | Fixed | Screenshot 4 |
+| 3 | 🔴 High | Log and differentiate failed and successful registration attempts | Invalid email register failed. Registration was successful after entering more than 2000 characters. | Fixed | Screenshot 3-4 |
 | 4 | 🔴 High | Review input validation consistency between frontend and backend | Encoded malicious input (e.g., test%2Ftest@test.com) bypassed frontend validation and was accepted by the backend. | Not Fixed | Screenshot 5 |
 | 5 | 🔴 High | Perform a full security review of authentication-related endpoints | SQL injection style input such as test'/*@test.com was accepted, indicating serious backend security weaknesses. | Not Fixed | Screenshot 6 |
 ---
