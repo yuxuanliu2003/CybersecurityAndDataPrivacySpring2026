@@ -1,4 +1,5 @@
 ## 11.02-1.3.2026 – Phase 1 Part 2 Retesting
+Debian Docker environment failed, so I switched to using Docker Desktop and VS Code.
 
 **Activity:**  
 - Deployed updated version of the booking system.
