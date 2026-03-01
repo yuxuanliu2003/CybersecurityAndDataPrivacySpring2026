@@ -1,4 +1,4 @@
-## 11.02.2026 – Phase 1 Part 2 Retesting
+## 11.02-1.3.2026 – Phase 1 Part 2 Retesting
 
 **Activity:**  
 - Deployed updated version of the booking system.
@@ -15,4 +15,4 @@
 All major vulnerabilities from Part 1 were verified and found to be fixed. Input validation and security handling were significantly improved.
 
 **Time Spent:**  
-- 3 hours
+- 20 hours
