@@ -30,4 +30,4 @@ All major vulnerabilities from Part 1 were verified and found to be fixed. Input
 - Several security issues identified in Part 1 remain unresolved.  
 
 **Time Spent:**  
-- 20 hours + 5
+- 10 hours + 4
