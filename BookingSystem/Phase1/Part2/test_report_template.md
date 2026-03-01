@@ -63,8 +63,8 @@
 | 1 | 🟠 Medium | Provide clear success and error messages after user registration attempts | Registration succeeded, but weak password failed | Fixed | Screenshot 1-2 |
 | 2 | 🔴 High | Improve server-side validation error handling and feedback | Invalid email register failed. | Fixed | Screenshot 2-3 |
 | 3 | 🔴 High | Log and differentiate failed and successful registration attempts | Invalid email register failed. Registration was successful after entering more than 2000 characters. | Fixed | Screenshot 3-4 |
-| 4 | 🔴 High | Review input validation consistency between frontend and backend | Encoded malicious input (e.g., test%2Ftest@test.com) bypassed frontend validation and was accepted by the backend. | Not Fixed | Screenshot 5 |
-| 5 | 🔴 High | Perform a full security review of authentication-related endpoints | SQL injection style input such as test'/*@test.com was accepted, indicating serious backend security weaknesses. | Not Fixed | Screenshot 6 |
+| 4 | 🔴 High | Review input validation consistency between frontend and backend | Encoded malicious input (e.g., test%2Ftest@test.com) bypassed frontend validation and was accepted by the backend.  I changed the HTML input type="email" for the email input box to input type="text", registration Faild. | Not Fixed | Screenshot 5-6 |
+| 5 | 🔴 High | Perform a full security review of authentication-related endpoints | SQL injection style input such as test'/*@test.com was accepted, indicating serious backend security weaknesses. | Not Fixed | Screenshot 7 |
 ---
 
 # Screenshots
@@ -88,10 +88,11 @@
 > <img width="904" height="369" alt="image" src="https://github.com/user-attachments/assets/c67d0137-f90b-40d5-8417-45a6aa4b6f14" />
 
 
-
-
-
 > ## Screenshot 6
+> <img width="1859" height="763" alt="image" src="https://github.com/user-attachments/assets/0d8061d5-775c-4317-8bb1-13d35ca4d54f" />
+
+
+> ## Screenshot 7
 > <img width="769" height="362" alt="image" src="https://github.com/user-attachments/assets/23ddd7a7-a20b-40e0-9491-434fcdd4a1f2" />
 
 
