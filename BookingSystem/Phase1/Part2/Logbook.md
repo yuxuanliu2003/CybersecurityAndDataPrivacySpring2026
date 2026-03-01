@@ -14,5 +14,19 @@
 **Summary:**  
 All major vulnerabilities from Part 1 were verified and found to be fixed. Input validation and security handling were significantly improved.
 
+
+**What I did:**  
+- Re-deployed the updated application environment.  
+- Tested registration functionality using valid and invalid inputs.  
+- Performed SQL injection, XSS, weak password, long input, and malformed email tests.  
+- Verified whether previously identified vulnerabilities were fixed.  
+- Conducted OWASP ZAP baseline scan and generated a new Markdown report (zap_report_round2.md).  
+
+**Findings:**  
+- Invalid email formats and SQL injection style inputs were still accepted by the backend.  
+- Server-side input validation remains weak.  
+- Registration feedback messages are still unclear.  
+- Several security issues identified in Part 1 remain unresolved.  
+
 **Time Spent:**  
 - 20 hours
