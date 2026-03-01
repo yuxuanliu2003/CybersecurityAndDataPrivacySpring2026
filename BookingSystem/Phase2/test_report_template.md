@@ -131,6 +131,15 @@ Hash Type: MD5
 
 ## Cracked Password
 
+> The MD5 hashes were cracked using Hashcat.
+> Dictionary attack was performed using the rockyou.txt wordlist:
+
+    hashcat -m 0 -a 0 hash.txt rockyou.txt
+
+> Rule-based and hybrid attacks were applied based on the hints provided in the task.
+> Candidate passwords were constructed according to the given patterns and verified using MD5 hashing.
+
+
 1. User: whatsupdoc@looneytunes.tv 
    Hash: a0e8402fe185455606a2ae870dcbc4cd (MD5)
    Password: carrots123
@@ -170,6 +179,14 @@ Hash Type: MD5
                    <img width="760" height="356" alt="image" src="https://github.com/user-attachments/assets/9fe35ef3-45a9-4479-bdc4-f8446db171b7" />
 
 
+## Questions:
+
+- What is the main difference between Dictionary and Non-Dictionary attacks?
+      - Dictionary attacks use a predefined list of words to guess passwords, while non-dictionary attacks use brute-force or rule-based techniques to generate all possible combinations.
+- What advantage does an attacker gain by having access to the system’s database that reveals the users and the password hashes?
+      - With database access, attackers can perform offline password cracking without system restrictions, allowing unlimited attempts and significantly increasing the success rate.
+- What concrete security benefits are achieved by using longer passwords instead of shorter ones?
+      - Longer passwords exponentially increase the number of possible combinations, making brute-force and dictionary attacks more difficult and slower.
 
 ---
 
