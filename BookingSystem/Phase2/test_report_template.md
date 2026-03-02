@@ -140,53 +140,58 @@ Hash Type: MD5
 > Candidate passwords were constructed according to the given patterns and verified using MD5 hashing.
 
 
-1. User: whatsupdoc@looneytunes.tv 
-   Hash: a0e8402fe185455606a2ae870dcbc4cd (MD5)
-   Password: carrots123
-   Evidence/Proof: <img width="767" height="101" alt="image" src="https://github.com/user-attachments/assets/0c0fa06e-2480-4607-8d0d-466efcb76a7b" />
-                   <img width="765" height="356" alt="image" src="https://github.com/user-attachments/assets/5c9e67dc-7423-4c83-881b-f025edac8492" />
+### 1. User: whatsupdoc@looneytunes.tv 
+- Hash: a0e8402fe185455606a2ae870dcbc4cd (MD5)
+- Password: carrots123
+- Evidence/Proof:
+  > <img width="767" height="101" alt="image" src="https://github.com/user-attachments/assets/0c0fa06e-2480-4607-8d0d-466efcb76a7b" />
+  > <img width="765" height="356" alt="image" src="https://github.com/user-attachments/assets/5c9e67dc-7423-4c83-881b-f025edac8492" />
 
 
 
-2. User: doh@springfieldpower.net 
-   Hash: d730fc82effd704296b5bbcff45f323e (MD5)
-   Password: donuts4life
-   Evidence/Proof: <img width="759" height="71" alt="image" src="https://github.com/user-attachments/assets/7929f532-b31c-452a-a3d7-09159ba8ed41" />
-                   <img width="771" height="361" alt="image" src="https://github.com/user-attachments/assets/a5a008dd-7d23-43a3-96a9-53b06a553b3a" />
+### 2. User: doh@springfieldpower.net 
+- Hash: d730fc82effd704296b5bbcff45f323e (MD5)
+- Password: donuts4life
+- Evidence/Proof:
+  > <img width="759" height="71" alt="image" src="https://github.com/user-attachments/assets/7929f532-b31c-452a-a3d7-09159ba8ed41" />
+  > <img width="771" height="361" alt="image" src="https://github.com/user-attachments/assets/a5a008dd-7d23-43a3-96a9-53b06a553b3a" />
 
 
 
-3. User: darkknight@gothamwatch.org 
-   Hash: 735f7f5e652d7697723893e1a5c04d90 (MD5)
-   Password: iamvengeance
-   Method: Rule-based attack
-   Explanation: According to the hint, the first six letters were "iamven". Based on Batman's famous phrase "I am vengeance", the full password was derived.
-   Evidence/Proof: <img width="786" height="357" alt="image" src="https://github.com/user-attachments/assets/9c54dd8d-718b-4a1b-b02b-bdf6eea7a632" />
+### 3. User: darkknight@gothamwatch.org 
+- Hash: 735f7f5e652d7697723893e1a5c04d90 (MD5)
+- Password: iamvengeance
+- Method: Rule-based attack
+- Explanation: According to the hint, the first six letters were "iamven". Based on Batman's famous phrase "I am vengeance", the full password was derived.
+- Evidence/Proof:
+  > <img width="786" height="357" alt="image" src="https://github.com/user-attachments/assets/9c54dd8d-718b-4a1b-b02b-bdf6eea7a632" />
 
 
 
-5. User: iamyourfather@deathstar.gov 
-   Hash: 706ab9fc256efabf4cb4cf9d31ddc8eb (MD5)
-   Password: darkside42
-   Evidence/Proof: <img width="759" height="65" alt="image" src="https://github.com/user-attachments/assets/5ee4acf2-07b3-4d67-a6da-e8ba1e315847" />
-                   <img width="771" height="370" alt="image" src="https://github.com/user-attachments/assets/7fe00a3f-116c-4e77-8fcb-b152b359c85a" />
+### 4. User: iamyourfather@deathstar.gov 
+- Hash: 706ab9fc256efabf4cb4cf9d31ddc8eb (MD5)
+- Password: darkside42
+- Evidence/Proof:
+  > <img width="759" height="65" alt="image" src="https://github.com/user-attachments/assets/5ee4acf2-07b3-4d67-a6da-e8ba1e315847" />
+  > <img width="771" height="370" alt="image" src="https://github.com/user-attachments/assets/7fe00a3f-116c-4e77-8fcb-b152b359c85a" />
 
 
-6. genius@starkindustries.com
-   Hash: d50ba4dd3fe42e17e9faa9ec29f89708 (MD5)
-   Password: iamironman
-   Evidence/Proof: <img width="748" height="65" alt="image" src="https://github.com/user-attachments/assets/62cf5206-db59-4436-99cf-5743ad4aff5b" />
-                   <img width="760" height="356" alt="image" src="https://github.com/user-attachments/assets/9fe35ef3-45a9-4479-bdc4-f8446db171b7" />
+### 5. genius@starkindustries.com
+- Hash: d50ba4dd3fe42e17e9faa9ec29f89708 (MD5)
+- Password: iamironman
+- Evidence/Proof:
+  > <img width="748" height="65" alt="image" src="https://github.com/user-attachments/assets/62cf5206-db59-4436-99cf-5743ad4aff5b" />
+  > <img width="760" height="356" alt="image" src="https://github.com/user-attachments/assets/9fe35ef3-45a9-4479-bdc4-f8446db171b7" />
 
 
 ## Questions:
 
 - What is the main difference between Dictionary and Non-Dictionary attacks?
-      - Dictionary attacks use a predefined list of words to guess passwords, while non-dictionary attacks use brute-force or rule-based techniques to generate all possible combinations.
+    - Dictionary attacks use a predefined list of words to guess passwords, while non-dictionary attacks use brute-force or rule-based techniques to generate all possible combinations.
 - What advantage does an attacker gain by having access to the system’s database that reveals the users and the password hashes?
-      - With database access, attackers can perform offline password cracking without system restrictions, allowing unlimited attempts and significantly increasing the success rate.
+    - With database access, attackers can perform offline password cracking without system restrictions, allowing unlimited attempts and significantly increasing the success rate.
 - What concrete security benefits are achieved by using longer passwords instead of shorter ones?
-      - Longer passwords exponentially increase the number of possible combinations, making brute-force and dictionary attacks more difficult and slower.
+    - Longer passwords exponentially increase the number of possible combinations, making brute-force and dictionary attacks more difficult and slower.
 
 ---
 
