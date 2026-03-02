@@ -89,3 +89,92 @@
 #### Time Spent:
 
 #### - 8 hours
+
+---
+
+# ZAP Authorization Testing for Phase 3
+## Environment:
+
+Docker-based Booking System running on localhost:8004
+OWASP ZAP 2.17.0 (Chinese interface)
+
+## Activity:
+
+Performed authorization testing using OWASP ZAP.
+Executed automated scan and forced browsing.
+Tested application behavior under different roles (Reserver and Administrator).
+Compared ZAP findings with manual authorization testing results.
+
+## Tools Used:
+
+OWASP ZAP
+Browser manual testing
+Docker
+Operating System: Windows (Docker environment)
+
+## What I did:
+
+Launched OWASP ZAP and scanned the application at http://localhost:8004
+.
+
+Reviewed discovered endpoints in the Site Tree.
+
+Identified additional endpoints:
+
+/robots.txt
+
+/sitemap.xml
+
+/status.html
+
+Performed forced browsing to detect hidden directories.
+
+Logged in as normal user and manually accessed:
+
+/reservation?id=1
+
+/reservation?id=2
+
+/reservation?id=999
+
+Observed HTTP responses in ZAP History tab.
+
+Repeated the same tests while logged in as Administrator.
+
+Compared response codes and behavior between roles.
+
+## Findings:
+
+No hidden admin panels or debug endpoints were discovered.
+
+No High or Medium severity alerts were reported by ZAP.
+
+All unauthorized reservation ID access attempts returned:
+
+500 Internal Server Error
+
+This occurred for both normal user and administrator accounts.
+
+No successful IDOR vulnerability was identified.
+
+However, returning 500 instead of 403 or 404 indicates improper authorization error handling.
+
+## Comparison with Manual Testing:
+
+ZAP results were consistent with manual testing findings.
+
+No additional authorization bypass vulnerabilities were discovered.
+
+## What I learned:
+
+How to use OWASP ZAP to analyze site structure and request history.
+
+How to verify authorization behavior using HTTP status codes.
+
+How to test ID-based access control using direct URL manipulation.
+
+The importance of returning proper HTTP status codes (403/404) instead of 500 errors for unauthorized access attempts.
+
+### Time Spent:
+
+### 6 hours
