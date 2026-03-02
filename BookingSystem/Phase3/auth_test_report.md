@@ -125,3 +125,98 @@
 - Unauthorized access attempts result in 500 Internal Server Error instead of proper 403/404 responses.
 - Reservation ownership can be manually manipulated.
 - No clearly separated admin interface.
+---
+
+# OWASP ZAP Authorization Testing – Round 2
+
+## Target
+http://localhost:8004
+
+---
+
+## 1. Site Discovery
+
+ZAP discovered the following endpoints:
+
+- /
+- /login
+- /register
+- /reservation
+- /resources
+- /robots.txt
+- /sitemap.xml
+- /status.html
+  > <img width="992" height="612" alt="image" src="https://github.com/user-attachments/assets/934335fc-e758-4c17-a9f7-9d4d1351c169" />
+
+New pages discovered by ZAP:
+- /robots.txt
+- /sitemap.xml
+- /status.html
+
+No hidden admin or debug endpoints were found.
+
+---
+
+## 2. Role-Based Testing
+
+### Reserver (Normal User)
+
+Tested:
+- /reservation?id=1
+- /reservation?id=2
+- /reservation?id=999
+  > <img width="854" height="332" alt="image" src="https://github.com/user-attachments/assets/d9ff9e9d-d637-4014-ba65-7c22315186d1" />
+
+Result:
+All returned 500 Internal Server Error.
+
+No unauthorized data exposure occurred.
+
+---
+
+### Administrator
+
+Tested:
+- /reservation?id=1
+- /reservation?id=2
+- /reservation?id=4
+- /reservation?id=999
+  > <img width="751" height="129" alt="image" src="https://github.com/user-attachments/assets/7a429343-cb6a-4de5-987f-7364298e98a3" />
+
+Result:
+All returned 500 Internal Server Error.
+
+Administrator did not gain unintended access through URL manipulation.
+
+---
+
+## 3. Authorization Analysis
+
+- No successful IDOR vulnerabilities detected.
+- No hidden administrative endpoints discovered.
+- No high or medium severity alerts detected by ZAP.
+
+However:
+
+Unauthorized access attempts return 500 Internal Server Error instead of proper:
+
+- 403 Forbidden
+- 404 Not Found
+
+This indicates improper error handling for authorization failures.
+
+---
+
+## 4. Comparison with Manual Testing
+
+ZAP findings were consistent with manual testing results.
+
+ZAP did not identify additional authorization vulnerabilities beyond those discovered during manual testing.
+
+---
+
+## 5. Conclusion
+
+The system enforces role-based access control and prevents direct unauthorized access.
+
+However, authorization failure handling should be improved to return appropriate HTTP status codes instead of 500 errors.
