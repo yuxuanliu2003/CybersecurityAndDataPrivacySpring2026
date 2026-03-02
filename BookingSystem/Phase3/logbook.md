@@ -178,3 +178,65 @@ The importance of returning proper HTTP status codes (403/404) instead of 500 er
 ### Time Spent:
 
 ### 6 hours
+---
+
+# Endpoint Discovery & API Testing
+
+## Environment:
+
+Docker-based Booking System running on localhost:8004
+Tools: wfuzz, curl, browser manual testing
+
+## Activity:
+
+Performed endpoint discovery using wfuzz.
+Conducted directory fuzzing with common.txt wordlist.
+Performed API enumeration using numeric ID range (1–1000).
+Tested backend authorization enforcement without authentication.
+
+## What I did:
+
+Ran wfuzz against the root directory to identify hidden endpoints.
+No unexpected directories such as /admin or /debug were found.
+
+Executed range-based fuzzing against:
+
+/api/reservations/{id}
+
+Discovered multiple valid reservation IDs returning HTTP 200.
+
+Used curl without authentication to access:
+
+/api/reservations/3
+/api/reservations/5
+/api/reservations/7
+
+All returned HTTP 200 and exposed reservation JSON data.
+
+Confirmed the same behavior in a browser without login.
+
+## Findings:
+
+The endpoint:
+
+GET /api/reservations/{id}
+
+Does not require authentication or authorization.
+
+Any user can enumerate reservation IDs and retrieve data.
+
+This confirms a Broken Access Control vulnerability.
+
+Severity: Critical.
+
+## What I learned:
+
+How to use wfuzz for directory and endpoint discovery.
+How to enumerate numeric identifiers in APIs.
+The importance of backend authorization enforcement.
+The difference between UI-level protection and API-level protection.
+How IDOR vulnerabilities can be discovered through simple enumeration.
+
+### Time Spent:
+
+### 6 hours
