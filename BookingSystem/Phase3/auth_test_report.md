@@ -220,3 +220,87 @@ ZAP did not identify additional authorization vulnerabilities beyond those disco
 The system enforces role-based access control and prevents direct unauthorized access.
 
 However, authorization failure handling should be improved to return appropriate HTTP status codes instead of 500 errors.
+
+---
+
+# Endpoint Discovery & API Testing – Round 3
+## Objectives:
+
+1. Discover hidden or unreferenced endpoints
+
+2. Verify if the API performs backend authorization checks
+
+3. Test for IDORs or missing access controls
+   
+---
+
+## Tools
+- wfuzz 3.1.0
+- Wordlist: common.txt
+- Range fuzzing (1–1000)
+- curl
+- Browser manual testing
+
+---
+
+## Part 1: Directory Cracking
+    wfuzz -c -w /wordlists/common.txt --hc 404 http://host.docker.internal:8004/FUZZ
+
+### Endpoints found:
+
+- /
+- /login
+
+- /logout
+
+- /register
+
+- /resources
+
+- /reservation
+
+### Not found:
+
+- /admin
+
+- /debug
+
+- /backup
+
+- /config
+
+### Conclusion:
+
+- No hidden directories or unreferenced pages found.
+> <img width="1469" height="858" alt="image" src="https://github.com/user-attachments/assets/15ee75ce-4693-47fc-a8f9-6d2074268679" />
+
+---
+## Part 2: API Enumeration Testing
+    wfuzz -c -z range,1-1000 --hc 404 http://host.docker.internal:8004/api/reservations/FUZZ
+> <img width="1471" height="989" alt="image" src="https://github.com/user-attachments/assets/968ee7fb-02e6-4a57-a206-0c54d6d2d025" />
+---
+## Part 3: API Access Test Without Login
+### Using curl (without logging in):
+      curl -i http://host.docker.internal:8004/api/reservations/3
+> <img width="1482" height="441" alt="image" src="https://github.com/user-attachments/assets/60ffc5af-9453-45d3-9566-0ddb1cd6ae37" />
+### Accessed without browser login:
+      http://localhost:8004/api/reservations/3
+> <img width="1320" height="312" alt="image" src="https://github.com/user-attachments/assets/9b89bdf5-ac5b-4be6-be15-36af05f8d809" />
+---
+# 🚨 Critical Security Discovery
+
+## Unverified users can:
+
+### - Enumerate reservation IDs
+
+### - Access the reservation API
+
+### - Read complete reservation data
+
+## This is:
+
+### - Broken Access Control (OWASP Top 10 A01)
+
+### - Belongs to the IDOR risk category.
+
+## Severity: Critical⚠️
