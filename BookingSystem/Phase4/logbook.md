@@ -20,4 +20,4 @@ Outcome:
 The system partially follows GDPR principles such as password hashing and pseudonymization, but lacks transparency documentation and user data management features.
 
 Time Spent:
-4 hours
+6 hours
