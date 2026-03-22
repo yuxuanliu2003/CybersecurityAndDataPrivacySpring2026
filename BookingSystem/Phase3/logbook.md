@@ -239,4 +239,4 @@ How IDOR vulnerabilities can be discovered through simple enumeration.
 
 ### Time Spent:
 
-### 6 hours
+### 8 hours
