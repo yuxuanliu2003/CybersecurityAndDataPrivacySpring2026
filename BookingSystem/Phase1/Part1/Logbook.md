@@ -19,4 +19,4 @@
 - After submitting the registration form, the application redirects back to the registration page without displaying any success or error message.
 
 **Time spent:**  
-- 8 hours
+- 5 hours
