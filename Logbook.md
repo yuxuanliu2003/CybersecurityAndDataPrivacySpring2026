@@ -14,3 +14,6 @@
 | 30.01.2026 | 1 | Materials + Lab: Password reset broken logic | Solved |
 | 01.02.2026 | 1 | Materials + Lab: Unprotected admin functionality | Solved |
 | 01.02.2026 | 1 | Materials + Lab: User role can be modified in user profile | Solved |
+
+<img width="1118" height="355" alt="image" src="https://github.com/user-attachments/assets/82e1f99d-0e0e-443a-90f1-d65e23032380" />
+~8 h
