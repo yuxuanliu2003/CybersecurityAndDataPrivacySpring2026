@@ -29,7 +29,7 @@ What I learned:
 - Basic penetration testing techniques on web applications
 
 ## Phase 2
-I focused on password cracking by extracting password hashes from the system and attempting to recover the original passwords.
+In phase 2, I focused on password cracking by extracting password hashes from the system and attempting to recover the original passwords.
 
 I used Hashcat to perform dictionary attacks with the rockyou.txt wordlist. In addition, I applied rule-based and hybrid attacks based on hints provided in the task. These methods allowed me to efficiently identify common password patterns and weak passwords.
 
@@ -52,7 +52,7 @@ What I learned:
 - The importance of strong, complex passwords in preventing attacks
 
 ## Phase 3
-I performed authentication testing on the booking system. I analyzed how user login, session management, and access control were implemented. The goal was to identify weaknesses in authentication and authorization mechanisms.
+In phase 3, I performed authentication testing on the booking system. I analyzed how user login, session management, and access control were implemented. The goal was to identify weaknesses in authentication and authorization mechanisms.
 
 What worked:
 - Login functionality was operational and allowed user authentication
@@ -74,24 +74,30 @@ What I learned:
 - How attackers can exploit weak authentication mechanisms
 
 ## Phase 4
-I analyzed the system from a GDPR perspective and created compliance documentation.
+In Phase 4, I analyzed the system from a GDPR perspective and created compliance documentation.
 
 What worked:
-- Database inspection
-- Identifying personal data
+
+- Database inspection helped identify stored personal data
+- It was possible to map how user data is processed and stored
 
 What didn't work:
-- Some GDPR requirements were missing in the system
+
+- Several GDPR requirements were missing or only partially implemented
+- Limited user control over personal data (e.g., deletion or export)
 
 Most time-consuming:
-- Understanding GDPR requirements
+
+- Understanding GDPR requirements and applying them to the system
 
 What I learned:
-- Data protection principles
-- Importance of privacy policies and user rights
+
+- Core data protection principles such as data minimization and transparency
+- The importance of privacy policies and user rights
+- How security and privacy are closely connected in real systems
 
 # Reflection
-This course helped me understand both technical security and data protection principles. I learned how to identify vulnerabilities, perform penetration testing, and evaluate system security. Additionally, I gained knowledge about GDPR and the importance of protecting user data. Overall, the course improved my practical cybersecurity skills.
+This course helped me understand both technical security and data protection principles. I learned how to identify vulnerabilities, perform penetration testing, and evaluate system security in a practical environment. In addition, I gained knowledge about GDPR and the importance of protecting user data. Overall, the course improved my problem-solving skills and deepened my understanding of real-world cybersecurity challenges.
 
 # Logbook
 Total hours: 86 hours
@@ -106,4 +112,4 @@ Hours per topic:
 
 # Feedback
 
-The course was very practical and helped me understand real-world cybersecurity concepts. The hands-on labs were especially useful. However, some instructions could be clearer for beginners.
+The course was very practical and helped me understand real-world cybersecurity concepts. The hands-on labs were especially useful and helped connect theory with practice. However, some instructions could be clearer for beginners, especially during the initial setup and ZAP phases.
